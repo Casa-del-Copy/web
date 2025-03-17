@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Casa del Copy",
-  description: "Content, ne sapunica",
+  description: "Content, ne sapunica.",
 };
 
 export default function RootLayout({
