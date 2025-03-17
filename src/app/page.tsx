@@ -10,7 +10,7 @@ export default function Home() {
         </div>
 
         <Image
-          src="/casadelcopy.jpg"
+          src="/logo-with-bg.jpg"
           alt="Casa del Copy"
           width={600}
           height={300}
