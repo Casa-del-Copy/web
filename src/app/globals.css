@@ -24,7 +24,6 @@
   font-display: swap;
 }
 
-
 :root {
   --color-dark: #171614;
   --color-magenta: #943D6D;
@@ -62,6 +61,12 @@ body {
   font-size: 18px;
 }
 
+@media (min-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+}
+
 .colorPink {
   color: var(--color-pink);
 }
@@ -70,115 +75,3 @@ body {
   color: var(--color-green);
 }
 
-.mainContainer {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-}
-
-.mainText {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  font-size: 18px;
-}
-
-.mainTextLarge {
-  font-size: 40px;
-  line-height: 1;
-}
-
-.scalable {
-  transition: transform 150ms;
-}
-
-.scalable:hover {
-  transform: scale(1.2);
-}
-
-.backgroundStripeTop {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
-}
-
-.backgroundStripeBottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-}
-
-@media (min-width: 1025px) {
-  .mainTextLarge {
-    font-size: 72px;
-  }
-}
-
-@media (min-width: 640px and max-width: 1024px) {
-  .mainTextLarge {
-    font-size: 54px;
-  }
-}
-
-@media (min-width: 640px) {
-  body {
-    font-size: 16px;
-  }
-
-  .logoContainer {
-    position: absolute;
-    top:60px;
-    left: 60px;
-  }
-
-  .logoContainer svg {
-    height: 120px;
-  }
-
-  .mobileContentNeSapunica {
-    display: none;
-  }
-
-  .contentNeSapunica {
-    position: absolute;
-    bottom: 60px;
-    right: 60px;
-    font-size: 48px;
-  }
-}
-
-@media (max-width: 639px) {
-  .logoContainer {
-    margin-bottom: 40px;
-  }
-
-  .contentNeSapunica {
-    display: none;
-  }
-
-  .mobileContentNeSapunica {
-    font-size: 30px;
-  }
-
-  .backgroundStripeBottom {
-    display: none;
-  }
-
-  .companyInfo {
-    border-top: 1px solid var(--color-pink);
-    padding-top: 48px;
-  }
-}
-
-@media (max-width: 430px) {
-  .mainTextLarge {
-    font-size: 32px;
-  }
-
-  .mobileContentNeSapunica {
-    font-size: 24px;
-  }
-}
