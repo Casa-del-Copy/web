@@ -70,12 +70,6 @@ body {
   color: var(--color-green);
 }
 
-.logoContainer {
-  position: absolute;
-  top: 60px;
-  left: 60px;
-}
-
 .mainContainer {
   text-align: center;
   display: flex;
@@ -91,15 +85,39 @@ body {
 }
 
 .mainTextLarge {
-  font-size: 4rem;
+  font-size: 40px;
   line-height: 1;
 }
 
+@media (min-width: 640px) {
+  .mainTextLarge {
+    font-size: 72px;
+  }
+}
+
+@media (max-width: 639px) {
+  .logoContainer {
+    margin-bottom: 80px;
+  }
+}
+
 .footerContainer {
-  position: absolute;
-  bottom: 60px;
-  right: 60px;
-  font-size: 48px;
+  font-size: 32px;
+}
+
+@media (min-width: 640px) {
+  .footerContainer {
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 639px) {
+  .footerContainer {
+    margin-top: 40px;
+  }
 }
 
 .scalable {
@@ -122,4 +140,10 @@ body {
   bottom: 0;
   left: 0;
   z-index: -1;
+}
+
+@media (max-width: 639px) {
+  .backgroundStripeBottom {
+    display: none;
+  }
 }
