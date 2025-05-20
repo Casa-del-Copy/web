@@ -1,26 +1,125 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'TTRamillas';
+  src: url('/fonts/TTRamillas-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTRamillas';
+  src: url('/fonts/TTRamillas-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTRamillas';
+  src: url('/fonts/TTRamillas-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+
 :root {
-  --background: #541d47;
-  --foreground: #ededed;
+  --color-dark: #171614;
+  --color-magenta: #943D6D;
+  --color-pink: #E06C88;
+  --color-green: #C4D6B0;
+  --color-beige: #FFF8F0;
+  --color-white: #FFFFFF;
+
+  --primary-color: #541d47;
+  --secondary-color: #91375C;
+  --background: var(--color-magenta);
+  --foreground: var(--color-beige);
+  --font-sans: var(--font-ttramillas);
+  --font-mono: var(--font-ttramillas);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-ttramillas);
+  --font-mono: var(--font-ttramillas);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #541d47;
-    --foreground: #ededed;
+    --background: var(--color-magenta);
+    --foreground: var(--color-beige);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-ttramillas), Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.colorPink {
+  color: var(--color-pink);
+}
+
+.colorGreen {
+  color: var(--color-green);
+}
+
+.logoContainer {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+}
+
+.mainContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.mainText {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-size: 18px;
+}
+
+.mainTextLarge {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.footerContainer {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  font-size: 48px;
+}
+
+.scalable {
+  transition: transform 150ms;
+}
+
+.scalable:hover {
+  transform: scale(1.2);
+}
+
+.backgroundStripeTop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.backgroundStripeBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
