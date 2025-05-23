@@ -32,7 +32,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="socialLinks flex justify-center gap-12">
+          <div className="socialLinks flex justify-center">
             <a className="scalable" href="mailto: casadelcopy@gmail.com">
               <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 72 72" fill="none"><rect width="72" height="72" fill="#C4D6B0" rx="32"/><path fill="#fff" d="M53.318 31.416a.423.423 0 0 1 .682.33v14.379a3.376 3.376 0 0 1-3.375 3.375h-29.25A3.376 3.376 0 0 1 18 46.125V31.753c0-.351.4-.548.682-.33 1.575 1.223 3.663 2.777 10.835 7.987 1.484 1.083 3.987 3.361 6.483 3.347 2.51.021 5.063-2.306 6.49-3.347 7.172-5.21 9.253-6.77 10.828-7.994ZM36 40.5c1.631.028 3.98-2.053 5.16-2.91 9.331-6.772 10.042-7.363 12.193-9.05.408-.317.647-.809.647-1.33v-1.335a3.376 3.376 0 0 0-3.375-3.375h-29.25A3.376 3.376 0 0 0 18 25.875v1.336c0 .52.24 1.005.647 1.329 2.151 1.68 2.862 2.278 12.192 9.05 1.181.857 3.53 2.938 5.161 2.91Z"/></svg>
             </a>

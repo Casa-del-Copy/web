@@ -62,6 +62,10 @@
     left: 60px;
   }
 
+  .socialLinks {
+    gap: 48px;
+  }
+
   .logoContainer svg {
     height: 120px;
   }
@@ -85,6 +89,10 @@
 
   .logoContainer svg {
     height: 90px;
+  }
+
+  .socialLinks {
+    gap: 40px;
   }
 
   .contentNeSapunica {
