@@ -58,7 +58,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-ttramillas), Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 @media (min-width: 640px) {

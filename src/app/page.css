@@ -9,12 +9,16 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .mainTextLarge {
   font-size: 40px;
   line-height: 1;
+}
+
+.socialLinks svg {
+  height: 60px;
 }
 
 .scalable {
@@ -41,7 +45,7 @@
 
 @media (min-width: 1025px) {
   .mainTextLarge {
-    font-size: 72px;
+    font-size: 60px;
   }
 }
 
@@ -70,13 +74,17 @@
     position: absolute;
     bottom: 60px;
     right: 60px;
-    font-size: 48px;
+    font-size: 36px;
   }
 }
 
 @media (max-width: 639px) {
   .logoContainer {
     margin-bottom: 40px;
+  }
+
+  .logoContainer svg {
+    height: 90px;
   }
 
   .contentNeSapunica {
@@ -105,4 +113,8 @@
   .mobileContentNeSapunica {
     font-size: 24px;
   }
+}
+
+.companyInfo {
+  line-height: 2;
 }
