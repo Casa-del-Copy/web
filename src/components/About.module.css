@@ -1,0 +1,101 @@
+.companySection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.companySectionImage {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  aspect-ratio: 1300 / 886;
+  background-image: url("/about-mare-anja.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+  margin-bottom: 48px;
+}
+
+.companySectionText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+.companySectionTextParagraph {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.profileSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  margin: 72px 0 0 0;
+  max-width: 1300px;
+  width: 100%;
+  align-items: center;
+}
+
+.profileSectionImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+}
+
+.profileSectionText {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileSectionTextHeading {
+  margin-bottom: 1rem;
+  color: var(--color-text-2);
+}
+
+.profileSectionTextHeadingSubtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-bottom: 24px;
+}
+
+.profileSectionTextParagraph {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+  .profileSection {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .profileSection {
+    gap: 24px;
+  }
+  .profileSectionTextHeading {
+    font-size: 1.8rem;
+  }
+
+  .profileSectionTextHeadingSubtitle {
+    font-size: 1.15rem;
+  }
+
+  .profileSectionTextParagraph {
+    font-size: 1rem;
+  }
+}

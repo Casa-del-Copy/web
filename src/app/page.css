@@ -126,3 +126,11 @@
 .companyInfo {
   line-height: 2;
 }
+
+.colorPink {
+  color: var(--color-pink);
+}
+
+.colorGreen {
+  color: var(--color-green);
+}
