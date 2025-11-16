@@ -1,4 +1,3 @@
-import HoverableText from "@/components/HoverableText";
 import Section from "@/components/Section";
 import styles from './Services.module.css';
 

@@ -1,5 +1,4 @@
 import HoverableText from "@/components/HoverableText";
-import Heading from "@/components/HoverableText";
 import Section from "@/components/Section";
 
 export default function Contact() {
@@ -29,9 +28,10 @@ export default function Contact() {
         >
           <HoverableText
             tag="h3"
-            children="Kontakt"
             hoverText="¿Por qué no me llamas?"
-          />
+          >
+            Kontakt
+          </HoverableText>
 
           <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
             <a

@@ -10,16 +10,16 @@ interface HeaderProps {
 export default function Header({ isDark, toggleTheme }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setIsScrolled(window.scrollY > 50);
-  //   };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
 
-  //   handleScroll();
+    handleScroll();
 
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header

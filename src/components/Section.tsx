@@ -24,12 +24,15 @@ export default function Section({ children, headerText, headerHoverableText, cla
           }}
         >
           {headerHoverableText ? (
-            <HoverableText tag="div" children={headerText} hoverText={headerHoverableText} />
+            <HoverableText tag="div" hoverText={headerHoverableText} >
+              {headerText}
+            </HoverableText>
           ) : (
             <div>{headerText}</div>
           )}
         </h2>
       )}
+
       {children}
     </section>
   );
