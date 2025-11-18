@@ -1,31 +1,12 @@
 import HoverableText from "@/components/HoverableText";
 import Section from "@/components/Section";
+import styles from "./Contact.module.css";
 
 export default function Contact() {
   return (
     <Section>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          width: "100%",
-        }}
-      >
-        <div
-          style={{
-            background: "var(--color-bg-box-2)",
-            borderRadius: "28px",
-            padding: "72px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            textAlign: "center",
-            maxWidth: "800px",
-            width: "100%",
-            boxSizing: "border-box",
-          }}
-        >
+      <div className={styles.contactContainer}>
+        <div className={styles.contactBox}>
           <HoverableText
             tag="h3"
             hoverText="¿Por qué no me llamas?"
@@ -33,19 +14,13 @@ export default function Contact() {
             Kontakt
           </HoverableText>
 
-          <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
+          <div className={styles.contactIcons}>
             <a
+              className={styles.contactIconLink}
               href="https://www.instagram.com/casa.del.copy/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              style={{
-                height: 25,
-                width: 25,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -62,17 +37,11 @@ export default function Contact() {
             </a>
 
             <a
+              className={styles.contactIconLink}
               href="mailto:casadelcopy@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Email"
-              style={{
-                height: 25,
-                width: 25,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -90,27 +59,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-
-      {/* Responsive styles */}
-      <style jsx>{`
-        @media (max-width: 1024px) {
-          div[style*="maxWidth: \"800px\""] {
-            padding: 48px !important;
-          }
-        }
-        @media (max-width: 640px) {
-          div[style*="maxWidth: \"800px\""] {
-            padding: 32px !important;
-          }
-          h2[style*="fontSize: \"2.2rem\""] {
-            font-size: 1.8rem !important;
-            margin-bottom: 32px !important;
-          }
-          div[style*="gap: 32"] {
-            gap: 24px !important;
-          }
-        }
-      `}</style>
     </Section>
   );
 }

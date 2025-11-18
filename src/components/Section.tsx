@@ -1,5 +1,6 @@
 import HoverableText from "@/components/HoverableText";
 import { ReactNode } from "react";
+import styles from "./Section.module.css";
 
 interface SectionProps {
   children: ReactNode;
@@ -11,11 +12,7 @@ interface SectionProps {
 export default function Section({ children, headerText, headerHoverableText, className }: SectionProps) {
   return (
     <section
-      className={className}
-      style={{
-        margin: "108px 0",
-        width: "100%",
-      }}
+      className={`${styles.section} ${className}`}
     >
       {headerText && (
         <h2

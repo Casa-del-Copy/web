@@ -53,6 +53,7 @@ export default function HoverableText({ tag, children, hoverText, style }: {
       onMouseEnter: () => setIsHovered(true),
       onMouseLeave: () => setIsHovered(false),
       style,
+      className: isHovered ? "hovered-text" : "",
     },
     characters.slice(0, visibleChars).map((char, index) => (
       <span

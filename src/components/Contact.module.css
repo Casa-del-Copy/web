@@ -1,0 +1,53 @@
+@import "../core/custom-media.css";
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.contactBox {
+  background: var(--color-bg-box-2);
+  border-radius: 28px;
+  padding: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (--tablet) {
+  .contactBox {
+    padding: 48px;
+  }
+}
+
+@media (--mobile) {
+  .contactBox {
+    padding: 32px;
+  }
+}
+
+.contactIcons {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+@media (--mobile) {
+  .contactIcons {
+    gap: 24px;
+  }
+}
+
+.contactIconLink {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

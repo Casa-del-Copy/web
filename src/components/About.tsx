@@ -7,22 +7,29 @@ export default function About() {
     <>
       <Section>
         <div className={styles.companySection}>
+          <HoverableText tag="h2" hoverText="Televisa presenta">
+            O Casi
+          </HoverableText>
+
           <div
             className={styles.companySectionImage}
             aria-label="About company image"
           />
 
           <div className={styles.companySectionText}>
-            <HoverableText tag="h3" hoverText="Televisa presenta">
-              O Casi
-            </HoverableText>
-
             <p className={styles.companySectionTextParagraph}>
               Casa del Copy je kreativna agencija čiju sudbinu u šaci drže dvije mujersuele* koje se, iako stvaraju content s kojim vajba Gen Z, dobro sjećaju kako je Marisol zaradila ožiljak**.
               Godinama smo bile novinarke, ali slijedom životnih okolnosti postale smo content kreatorice i copywriterice***.
               Uživamo u kreiranju video i foto contenta, ali naša amor para siempre**** je riječ.
               Pisanje. Copy. Sukladno tome, u slobodno vrijeme savršeno precizno skeniramo, detektiramo i svisoka komentiramo AI tekstove.
               Za kraj, moto nam možda je {"\""}Content, ne sapunica{"\""}, ali tko smo mi da se pretvaramo - low key životni cilj nam je napisati (dobru) sapunicu.
+
+              <ul>
+                <li><sub>*Ženetina, klasična telenovela uvreda. Nismo, ali mujersuela je najbolja riječ.</sub></li>
+                <li><sub>**Pala je NA razbijeno ogledalo dok je trčala šumicom. S ogledalom.</sub></li>
+                <li><sub>***Male izmjene u srodnim područjima karijere nisu ništa neobično, prisjetimo se da je Juan Miguel, iako psihijatar, za nekoliko mjeseci postao oftalmolog-kirurg kako bi operirao Marichuy od sljepoće.</sub></li>
+                <li><sub>****Možete li vjerovati da ne postoji telenovela naziva “Amor para siempre”?</sub></li>
+              </ul>
             </p>
           </div>
         </div>
@@ -59,8 +66,15 @@ export default function About() {
       </Section>
 
       <Section>
-        {/* Mare Section */}
-        <div className={styles.profileSection}>
+        <div className={`${styles.profileSection} ${styles.reverse}`}>
+        <div
+          className={styles.profileSectionImage}
+          style={{
+            backgroundImage: 'url("/about-mare.jpeg")',
+          }}
+          aria-label="Marijana Galović"
+        />
+
           <div className={styles.profileSectionText}>
             <h3 className={styles.profileSectionTextHeading}>
               Marijana Galović
@@ -79,14 +93,6 @@ export default function About() {
               Kod kuće balansira školske i vrtićke zadatke svoje djece i raspored letova muža pilota. I sve uvijek sleti kako treba.
             </p>
           </div>
-
-          <div
-            className={styles.profileSectionImage}
-            style={{
-              backgroundImage: 'url("/about-mare.jpeg")',
-            }}
-            aria-label="Marijana Galović"
-          />
         </div>
       </Section>
     </>

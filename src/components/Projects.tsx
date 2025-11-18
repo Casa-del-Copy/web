@@ -60,7 +60,7 @@ const madreBadessaGalleryImages = [
 export default function Projects() {
   return (
     <Section>
-      <h2 style={{ margin: '0 0 48px 0', textAlign: "center", fontSize: "2.2rem", fontWeight: 700, lineHeight: 1.1, letterSpacing: "-1px" }}> Portfolio </h2>
+      <h2 style={{ textAlign: "center" }}> Portfolio </h2>
 
       <Section>
         <Project

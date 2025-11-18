@@ -1,3 +1,5 @@
+@import "../core/custom-media.css";
+
 .boxesGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -23,10 +25,9 @@
 
 .box ul {
   list-style: inside;
-  padding-left: 1.35em;
+  padding-left: 1.2em;
   display: flex;
   flex-direction: column;
-  gap: 0.8em;
 }
 
 .box:nth-child(1) h3,
@@ -48,7 +49,13 @@
   pointerEvents: none;
 }
 
-@media (max-width: 1024px) {
+@media (--mobile) {
+  .dropCircle {
+    display: none;
+  }
+}
+
+@media (--tablet) {
   .boxesGrid {
     grid-template-columns: 1fr;
   }
@@ -58,15 +65,12 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (--mobile) {
   .box {
-    padding: 28px;
-    font-size: 0.98rem;
+    padding: 40px 28px;
   }
+
   .boxesGrid {
-    gap: 18px;
-  }
-  .box h3 {
-    font-size: 1.15rem;
+    gap: 24px;
   }
 }

@@ -1,4 +1,5 @@
 import Section from "@/components/Section";
+import styles from "./Quote.module.css";
 
 interface QuoteProps {
   text: string;
@@ -7,50 +8,16 @@ interface QuoteProps {
 export default function Quote({ text }: QuoteProps) {
   return (
     <Section>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "100%",
-          margin: "72px 0",
-        }}
-      >
-        <div
-          style={{
-            position: "relative",
-            maxWidth: "650px",
-            width: "100%",
-            padding: "0 80px 0 24px",
-            textAlign: "center",
-          }}
-        >
-          <div
-            style={{
-              position: "relative",
-              display: "inline-block",
-              transform: "rotate(2.5deg)",
-              color: "var(--color-text-1)",
-              fontSize: "1.3rem",
-              lineHeight: 1.6,
-              fontStyle: "italic",
-            }}
-          >
-            {/* SVG Icon - rotated to the left */}
+      <div className={styles.quoteContainer}>
+        <div className={styles.quoteContent}>
+          <div className={styles.quoteText}>
             <svg
+              className={styles.quoteDropIcon}
               xmlns="http://www.w3.org/2000/svg"
               width="78"
               height="78"
               fill="none"
               viewBox="0 0 78 78"
-              style={{
-                position: "absolute",
-                left: "-28px",
-                top: "-30px",
-                transform: "rotate(-15deg)",
-                opacity: 0.6,
-                pointerEvents: "none",
-              }}
             >
               <path
                 fill="#943d6d"
@@ -63,30 +30,6 @@ export default function Quote({ text }: QuoteProps) {
           </div>
         </div>
       </div>
-
-      {/* Responsive styles */}
-      <style jsx>{`
-        @media (max-width: 1024px) {
-          div[style*="max-width: 650px"] {
-            max-width: 550px !important;
-          }
-        }
-        @media (max-width: 640px) {
-          div[style*="max-width: 650px"] {
-            max-width: calc(100% - 48px) !important;
-            padding: 0 16px 0 60px !important;
-          }
-          div[style*="fontSize: \"1.3rem\""] {
-            font-size: 1.1rem !important;
-          }
-          svg[style*="width: 48"] {
-            width: 36px !important;
-            height: 36px !important;
-            left: -48px !important;
-            top: -6px !important;
-          }
-        }
-      `}</style>
     </Section>
   );
 }

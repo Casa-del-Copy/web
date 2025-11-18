@@ -1,0 +1,12 @@
+@import "../core/custom-media.css";
+
+.section {
+  margin: 108px 0;
+  width: 100%;
+}
+
+@media (--mobile) {
+  .section {
+    margin: 48px 0;
+  }
+}

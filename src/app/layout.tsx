@@ -5,6 +5,26 @@ import "./globals.css";
 const ttRamillas = localFont({
   src: [
     {
+      path: "../fonts/TTRamillas-ExtraLight.woff2",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../fonts/TTRamillas-ExtraLightItalic.woff2",
+      weight: "200",
+      style: "italic",
+    },
+    {
+      path: "../fonts/TTRamillas-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../fonts/TTRamillas-LightItalic.woff2",
+      weight: "300",
+      style: "italic",
+    },
+    {
       path: "../fonts/TTRamillas-Regular.woff2",
       weight: "400",
       style: "normal",
@@ -35,6 +55,16 @@ const ttRamillas = localFont({
       style: "italic",
     },
     {
+      path: "../fonts/TTRamillas-ExtraBold.woff2",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../fonts/TTRamillas-ExtraBoldItalic.woff2",
+      weight: "800",
+      style: "italic",
+    },
+    {
       path: "../fonts/TTRamillas-Black.woff2",
       weight: "900",
       style: "normal",
@@ -44,18 +74,24 @@ const ttRamillas = localFont({
       weight: "900",
       style: "italic",
     },
+  ],
+  variable: "--font-ttramillas",
+});
+
+const ttRamillasOutline = localFont({
+  src: [
     {
-      path: "../fonts/TTRamillas-Light.woff2",
-      weight: "300",
+      path: "../fonts/TTRamillas-BlackOutline.woff2",
+      weight: "900",
       style: "normal",
     },
     {
-      path: "../fonts/TTRamillas-LightItalic.woff2",
-      weight: "300",
+      path: "../fonts/TTRamillas-BlackOutlineItalic.woff2",
+      weight: "900",
       style: "italic",
     },
   ],
-  variable: "--font-ttramillas",
+  variable: "--font-ttramillasoutline",
 });
 
 export const metadata: Metadata = {
@@ -74,7 +110,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </head>
-      <body className={`${ttRamillas.variable} antialiased`}>
+      <body className={`${ttRamillas.variable} ${ttRamillasOutline.variable} antialiased`}>
         {children}
       </body>
     </html>
