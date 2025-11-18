@@ -16,13 +16,23 @@
 @media (--mobile) {
   .header {
     height: auto;
-    padding: 24px;
+    padding: 24px 0;
   }
 }
 
 .header.isScrolled {
   height: 100px;
   padding: 24px;
+}
+
+.themeToggleContainer {
+  width: 82px;
+}
+
+@media (--mobile) {
+  .themeToggleContainer {
+    width: 66px;
+  }
 }
 
 .themeToggleButton {
@@ -56,13 +66,12 @@
 .logo {
   width: 310px;
   height: 192px;
-  /* transition: width 0.3s ease, height 0.3s ease; */
 }
 
 @media (--mobile-tablet) {
   .logo {
-    width: 155px;
-    height: 96px;
+    width: 206;
+    height: 128px;
   }
 }
 
@@ -81,7 +90,7 @@
 
 @media (--mobile) {
   .socialButtons {
-    gap: 12px;
+    gap: 16px;
   }
 }
 
