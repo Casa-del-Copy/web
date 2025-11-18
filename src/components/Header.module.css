@@ -59,7 +59,7 @@
   /* transition: width 0.3s ease, height 0.3s ease; */
 }
 
-@media (--tablet) {
+@media (--mobile-tablet) {
   .logo {
     width: 155px;
     height: 96px;

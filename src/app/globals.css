@@ -56,11 +56,14 @@
   --color-text-3: var(--color-pink);
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   background: var(--color-bg-body);
   color: var(--color-text-1);
   font-family: var(--font-ttramillas), Arial, Helvetica, sans-serif;
-  font-size: 16px;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
@@ -71,7 +74,7 @@ h1 {
   margin-bottom: 3.2rem;
 }
 
-@media (--tablet) {
+@media (--mobile-tablet) {
   h1 {
     font-size: 3.5rem;
     margin-bottom: 3rem;
@@ -92,7 +95,7 @@ h2 {
   margin-bottom: 2.8rem;
 }
 
-@media (--tablet) {
+@media (--mobile-tablet) {
   h2 {
     font-size: 2.8rem;
     margin-bottom: 2.4rem;
@@ -113,7 +116,7 @@ h3 {
   margin-bottom: 2.4rem;
 }
 
-@media (--tablet) {
+@media (--mobile-tablet) {
   h3 {
     font-size: 1.9rem;
     margin-bottom: 2rem;
@@ -134,7 +137,7 @@ h4 {
   margin-bottom: 2rem;
 }
 
-@media (--tablet) {
+@media (--mobile-tablet) {
   h4 {
     margin-bottom: 1.8rem;
   }
@@ -152,10 +155,6 @@ h5 {
   font-weight: 800;
   line-height: 1;
   margin-bottom: 1rem;
-}
-
-html {
-  font-size: 16px;
 }
 
 .hovered-text {

@@ -54,10 +54,10 @@ export default function Project({ videoUrl, heading, paragraph, position = "righ
   }, []);
 
   return (
-    <>
+    <div className={styles.project}>
       <div
         ref={containerRef}
-        className={`${styles.projectContainer} ${position === "left" ? styles.left : styles.right}`}
+        className={`${styles.videoTextContainer} ${position === "left" ? styles.left : styles.right}`}
       >
         {/* Video Container with Phone Mask */}
         <div className={styles.videoWrapper}>
@@ -90,6 +90,6 @@ export default function Project({ videoUrl, heading, paragraph, position = "righ
       {galleryImages && galleryImages.length > 0 && (
         <Gallery images={galleryImages} />
       )}
-    </>
+    </div>
   );
 }

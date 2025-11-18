@@ -16,7 +16,7 @@
   text-align: center;
 }
 
-@media (--tablet) {
+@media (--mobile-tablet) {
   .quoteContent {
     max-width: 550px;
   }
@@ -27,7 +27,6 @@
   display: inline-block;
   transform: rotate(2.5deg);
   color: var(--color-text-3);
-  font-size: 1.2rem;
   font-style: italic;
   max-width: 440px;
   font-weight: 500;
@@ -37,17 +36,15 @@
   font-weight: 200;
 }
 
-@media (--mobile) {
-  .quoteText {
-    font-size: 1.2rem;
-  }
-}
-
 .quoteDropIcon {
   position: absolute;
-  left: -28px;
+  left: -38px;
   top: -30px;
   transform: rotate(-15deg);
   opacity: 0.6;
   pointer-events: none;
+}
+
+.quoteDropIcon path {
+  fill: var(--color-text-2);
 }

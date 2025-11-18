@@ -66,7 +66,7 @@ export default function Projects() {
         <Project
           videoUrl="/projects/video-pt.mp4"
           heading="PT"
-          paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          paragraph="Volimo raditi s Maraskom, pogotovo na IG profilu pete_maraska, koji u potpunosti kreiramo, vodimo i punimo svježim idejama. Od postova i reelsa do dnevnih storija, svaki kadar, video i caption nastaje u našem malom kreativnom laboratoriju koji je stalni izvor smijeha i inspiracije. I ono nama najvažnije - kreativne slobode koju smo oduvijek željele."
           position="right"
           galleryImages={ptGalleryImages}
         />
@@ -76,7 +76,7 @@ export default function Projects() {
         <Project
           videoUrl="/projects/video-mb.mp4"
           heading="Madre Badessa"
-          paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          paragraph="Priča o Madre Badessa Spirits priča je o neprestanoj potrazi za svježim i kreativnim načinima da ljubiteljima finih pića približimo svijet premium likera i rakija. Iz mjeseca u mjesec stvaramo sadržaj koji otkriva sve ono što ovaj 100% hrvatski proizvod čini posebnim - autentičnost, profinjenost i dašak “pomalo lifestylea” kojem svi ponekad težimo. Kroz pažljivo oblikovane riječi, upečatljivu fotografiju i atmosferične video priče nastojimo prenijeti ljepotu rituala guštanja."
           position="left"
           galleryImages={madreBadessaGalleryImages}
         />

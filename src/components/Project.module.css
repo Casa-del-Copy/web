@@ -1,29 +1,41 @@
 @import "../core/custom-media.css";
 
-.projectContainer {
+.project {
   display: flex;
+  flex-direction: column;
+  gap: 24px;
   margin: 72px 0;
+}
+
+@media (--mobile-tablet) {
+  .project {
+    gap: 0;
+  }
+}
+
+.videoTextContainer {
+  display: flex;
   max-width: 1300px;
   width: 100%;
   gap: 144px;
   align-items: flex-start;
-  margin: 72px auto;
+  margin: 0 auto;
   max-width: 1000px;
   flex-direction: row;
 }
 
-.projectContainer.left {
+.videoTextContainer.left {
   flex-direction: row-reverse;
 }
 
 @media (--mobile) {
-  .projectContainer {
+  .videoTextContainer {
     flex-direction: column;
     align-items: center;
     gap: 48px;
   }
 
-  .projectContainer.left {
+  .videoTextContainer.left {
     flex-direction: column;
   }
 }
@@ -87,32 +99,10 @@
 }
 
 .projectParagraph {
-  font-size: 1.15rem;
-  line-height: 1.6;
-  margin: 0;
 }
 
-/* @media (max-width: 1024px) {
-  .projectContainer {
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  .videoWrapper {
-    max-width: 350px;
-  }
-
-  .projectHeading {
-    font-size: 1.8rem;
-  }
-
-  .projectParagraph {
-    font-size: 1rem;
-  }
-} */
-
 @media (--mobile) {
-  .projectContainer {
+  .videoTextContainer {
     flex-direction: column;
     align-items: center;
   }

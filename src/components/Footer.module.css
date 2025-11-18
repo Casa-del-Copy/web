@@ -45,7 +45,6 @@
 }
 
 .footerColumn li {
-  font-size: 1rem;
   line-height: 1.6;
   font-weight: 300;
 }
@@ -53,12 +52,5 @@
 .footerBlooperText {
   text-align: center;
   color: var(--color-text-3);
-  font-size: 3rem;
   font-family: var(--font-ttramillasoutline), Arial, Helvetica, sans-serif;
-}
-
-@media (--mobile) {
-  .footerBlooperText {
-    font-size: 2.2rem;
-  }
 }

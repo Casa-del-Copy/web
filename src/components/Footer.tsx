@@ -32,9 +32,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className={styles.footerBlooperText}>
+      <h2 className={styles.footerBlooperText}>
         Largate de mi casa!
-      </div>
+      </h2>
     </footer>
   );
 }
