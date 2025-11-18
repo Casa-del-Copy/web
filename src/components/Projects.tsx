@@ -1,3 +1,4 @@
+import LiveText from "@/components/LiveText";
 import Project from "@/components/Project";
 import Section from "@/components/Section";
 
@@ -60,7 +61,9 @@ const madreBadessaGalleryImages = [
 export default function Projects() {
   return (
     <Section>
-      <h2 style={{ textAlign: "center" }}> Portfolio </h2>
+      <LiveText tag="h2" hoverText="Portfolio" style={{ textAlign: "center" }}>
+        Portfolio
+      </LiveText>
 
       <Section>
         <Project

@@ -1,4 +1,4 @@
-import HoverableText from "@/components/HoverableText";
+import LiveText from "@/components/LiveText";
 import Section from "@/components/Section";
 import styles from './About.module.css';
 
@@ -7,9 +7,9 @@ export default function About() {
     <>
       <Section>
         <div className={styles.companySection}>
-          <HoverableText tag="h2" hoverText="Televisa presenta">
+          <LiveText tag="h2" hoverText="Televisa presenta">
             O Casi
-          </HoverableText>
+          </LiveText>
 
           <div
             className={styles.companySectionImage}

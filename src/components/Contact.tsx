@@ -1,4 +1,4 @@
-import HoverableText from "@/components/HoverableText";
+import LiveText from "@/components/LiveText";
 import Section from "@/components/Section";
 import styles from "./Contact.module.css";
 
@@ -7,12 +7,12 @@ export default function Contact() {
     <Section>
       <div className={styles.contactContainer}>
         <div className={styles.contactBox}>
-          <HoverableText
+          <LiveText
             tag="h3"
             hoverText="¿Por qué no me llamas?"
           >
             Kontakt
-          </HoverableText>
+          </LiveText>
 
           <div className={styles.contactIcons}>
             <a

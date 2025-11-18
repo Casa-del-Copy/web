@@ -24,6 +24,12 @@
   flex-direction: row;
 }
 
+@media (--tablet) {
+  .videoTextContainer {
+    gap: 48px;
+  }
+}
+
 .videoTextContainer.left {
   flex-direction: row-reverse;
 }
@@ -41,7 +47,7 @@
 }
 
 .videoWrapper {
-  flex: 0 0 auto;
+  flex: 1;
   width: 100%;
   max-width: 400px;
   position: relative;
@@ -84,7 +90,7 @@
 }
 
 .textContent {
-  flex: 1 1 auto;
+  flex: 1;
   padding: 24px;
 }
 
@@ -95,6 +101,7 @@
 @media (--mobile) {
   .projectHeading {
     text-align: center;
+    margin-bottom: 0;
   }
 }
 

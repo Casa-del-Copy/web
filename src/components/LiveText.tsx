@@ -2,17 +2,22 @@
 
 import { useState, createElement, useEffect, useMemo, useRef, CSSProperties } from "react";
 
-export default function HoverableText({ tag, children, hoverText, style }: {
+export default function LiveText({ tag, children, hoverText, textOnIntersection, style }: {
   tag: "a" | "div" | "span" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p";
   children: React.ReactNode;
   hoverText?: string;
+  textOnIntersection?: string;
   style?: CSSProperties | undefined;
 }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [isIntersected, setIsIntersected] = useState(false);
   const [visibleChars, setVisibleChars] = useState(0);
   const isInitialRender = useRef(true);
+  const elementRef = useRef<HTMLElement>(null);
 
-  const displayText = isHovered && hoverText ? hoverText : children;
+  const altText = textOnIntersection ?? hoverText ?? children;
+  const shouldShowAltText = textOnIntersection ? isIntersected : isHovered;
+  const displayText = shouldShowAltText ? altText : children;
 
   const textString = useMemo(() => {
     if (typeof displayText === "string") return displayText;
@@ -25,7 +30,7 @@ export default function HoverableText({ tag, children, hoverText, style }: {
 
   useEffect(() => {
     // If this is the initial render and we're not hovering, show all characters immediately
-    if (isInitialRender.current && !isHovered) {
+    if (isInitialRender.current && !shouldShowAltText) {
       setVisibleChars(characters.length);
       isInitialRender.current = false;
       return;
@@ -45,7 +50,32 @@ export default function HoverableText({ tag, children, hoverText, style }: {
     return () => {
       timeouts.forEach(clearTimeout);
     };
-  }, [textString, isHovered, characters.length]);
+  }, [textString, shouldShowAltText, characters.length]);
+
+  useEffect(() => {
+    if (!textOnIntersection || !elementRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+            console.log('isIntersecting');
+            setIsIntersected(true);
+          }
+        });
+      },
+      {
+        rootMargin: '0px 0px 50% 0px',
+        threshold: [0.5],
+      }
+    );
+
+    observer.observe(elementRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [textOnIntersection]);
 
   return createElement(
     tag,

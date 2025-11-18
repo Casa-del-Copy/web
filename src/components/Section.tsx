@@ -1,4 +1,4 @@
-import HoverableText from "@/components/HoverableText";
+import LiveText from "@/components/LiveText";
 import { ReactNode } from "react";
 import styles from "./Section.module.css";
 
@@ -21,9 +21,9 @@ export default function Section({ children, headerText, headerHoverableText, cla
           }}
         >
           {headerHoverableText ? (
-            <HoverableText tag="div" hoverText={headerHoverableText} >
+            <LiveText tag="div" hoverText={headerHoverableText} >
               {headerText}
-            </HoverableText>
+            </LiveText>
           ) : (
             <div>{headerText}</div>
           )}
