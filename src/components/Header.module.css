@@ -3,7 +3,6 @@
 .header {
   width: 100%;
   display: flex;
-  height: 280px;
   align-items: flex-start;
   padding: 48px;
   justify-content: space-between;
@@ -55,7 +54,16 @@
 }
 
 .logo {
-  transition: width 0.3s ease, height 0.3s ease;
+  width: 310px;
+  height: 192px;
+  /* transition: width 0.3s ease, height 0.3s ease; */
+}
+
+@media (--tablet) {
+  .logo {
+    width: 155px;
+    height: 96px;
+  }
 }
 
 @media (--mobile) {

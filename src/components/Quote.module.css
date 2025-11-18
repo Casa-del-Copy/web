@@ -27,10 +27,14 @@
   display: inline-block;
   transform: rotate(2.5deg);
   color: var(--color-text-3);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-style: italic;
-  font-weight: 300;
   max-width: 440px;
+  font-weight: 500;
+}
+
+[data-theme="dark"] .quoteText {
+  font-weight: 200;
 }
 
 @media (--mobile) {

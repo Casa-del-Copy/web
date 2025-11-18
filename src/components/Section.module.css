@@ -5,6 +5,12 @@
   width: 100%;
 }
 
+@media (--tablet) {
+  .section {
+    margin: 72px 0;
+  }
+}
+
 @media (--mobile) {
   .section {
     margin: 48px 0;

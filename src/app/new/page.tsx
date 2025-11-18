@@ -36,7 +36,7 @@ export default function Home() {
   };
 
   return (
-    <div className="font-[family-name:var(--font-geist-sans)] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 w-full">
       <main>
         <Header isDark={isDark} toggleTheme={toggleTheme} />
 

@@ -9,6 +9,7 @@
   --color-magenta-40opacity: rgba(148, 61, 109, 0.4);
   --color-pink: #E06C88;
   --color-green: #C4D6B0;
+  --color-green-20opacity: rgba(196, 214, 176, 0.2);
   --color-beige: #FFF8F0;
   --color-white: #FFFFFF;
   --bp-mobile: 639px;
@@ -48,8 +49,8 @@
 
 [data-theme="light"] {
   --color-bg-body: var(--color-beige);
-  --color-bg-box-1: var(--color-magenta-green);
-  --color-bg-box-2: var(--color-magenta-green);
+  --color-bg-box-1: var(--color-white);
+  --color-bg-box-2: var(--color-green-20opacity);
   --color-text-1: var(--color-dark);
   --color-text-2: var(--color-magenta);
   --color-text-3: var(--color-pink);
@@ -65,9 +66,16 @@ body {
 
 h1 {
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.2;
   margin-bottom: 3.2rem;
+}
+
+@media (--tablet) {
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+  }
 }
 
 @media (--mobile) {
@@ -79,9 +87,16 @@ h1 {
 
 h2 {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.1;
   margin-bottom: 2.8rem;
+}
+
+@media (--tablet) {
+  h2 {
+    font-size: 2.8rem;
+    margin-bottom: 2.4rem;
+  }
 }
 
 @media (--mobile) {
@@ -93,9 +108,16 @@ h2 {
 
 h3 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.1;
   margin-bottom: 2.4rem;
+}
+
+@media (--tablet) {
+  h3 {
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+  }
 }
 
 @media (--mobile) {
@@ -107,9 +129,15 @@ h3 {
 
 h4 {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.1;
   margin-bottom: 2rem;
+}
+
+@media (--tablet) {
+  h4 {
+    margin-bottom: 1.8rem;
+  }
 }
 
 @media (--mobile) {
@@ -121,7 +149,7 @@ h4 {
 
 h5 {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1;
   margin-bottom: 1rem;
 }
