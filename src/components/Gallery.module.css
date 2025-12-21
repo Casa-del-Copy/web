@@ -1,9 +1,17 @@
 @import "../core/custom-media.css";
 
 .sliderContainer {
-  width: 100%;
+  /* width: 100%; */
   margin-top: 48px;
   position: relative;
+  max-height: 400px;
+}
+
+@media (--mobile) {
+  .sliderContainer {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
 }
 
 .sliderItem {
@@ -11,6 +19,7 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  max-height: 400px;
 }
 
 .sliderItem:hover {
@@ -20,6 +29,7 @@
 
 .sliderImage {
   border-radius: 8px;
+  max-height: 400px;
 }
 
 .galleryModalOverlay {

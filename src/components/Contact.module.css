@@ -4,7 +4,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+}
+
+@media (--mobile) {
+  .contactContainer {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
 }
 
 .contactBox {
@@ -23,6 +29,7 @@
 @media (--mobile-tablet) {
   .contactBox {
     padding: 48px;
+    border-radius: 0;
   }
 }
 

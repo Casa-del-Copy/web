@@ -1,3 +1,5 @@
+@import "../core/custom-media.css";
+
 .mainContainer {
   text-align: center;
   display: flex;
@@ -43,19 +45,19 @@
   z-index: -1;
 }
 
-@media (min-width: 1025px) {
+@media (--desktop) {
   .mainTextLarge {
     font-size: 60px;
   }
 }
 
-@media (min-width: 640px and max-width: 1024px) {
+@media (--tablet) {
   .mainTextLarge {
     font-size: 54px;
   }
 }
 
-@media (min-width: 640px) {
+@media (--tablet-desktop) {
   .logoContainer {
     position: absolute;
     top:60px;
@@ -82,7 +84,7 @@
   }
 }
 
-@media (max-width: 639px) {
+@media (--mobile) {
   .logoContainer {
     margin-bottom: 40px;
   }
@@ -113,7 +115,7 @@
   }
 }
 
-@media (max-width: 430px) {
+@media (--mobile-small) {
   .mainTextLarge {
     font-size: 32px;
   }

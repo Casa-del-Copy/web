@@ -23,7 +23,11 @@
 
 @media (--mobile) {
   .companySectionImage {
+    width: calc(100% + 48px);
     margin-bottom: 24px;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    border-radius: 0;
   }
 }
 
@@ -86,6 +90,15 @@
   background-size: cover;
   border-radius: 24px;
   flex: 1;
+}
+
+@media (--mobile) {
+  .profileSectionImage {
+    width: calc(100% + 48px);
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    border-radius: 0;
+  }
 }
 
 .profileSectionText {

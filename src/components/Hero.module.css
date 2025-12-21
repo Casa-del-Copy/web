@@ -1,3 +1,5 @@
+@import "../core/custom-media.css";
+
 .headline {
   display: flex;
   justify-content: center;
@@ -16,6 +18,14 @@
   border-radius: 24px;
   position: relative;
   z-index: -1;
+}
+
+@media (--mobile) {
+  .heroImage {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    border-radius: 0;
+  }
 }
 
 .heroImageExtension {
