@@ -4,10 +4,8 @@
 
 - design review by Pero
 - papiri kako lete na vrhu hero slike
-- popraviti infinte scroll na galeriji
 - ispeglate male quotese
 - popraviti email ikonu u contact
-- video ratio problem na mobileu
 - dodati da se espaniol automatski vrti na mobileu
 
 ## Notes
