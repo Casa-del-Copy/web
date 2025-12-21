@@ -191,6 +191,12 @@ a {
   opacity: 0.03;
 }
 
+@media (max-width: 639px) {
+  .bg-pattern {
+    background-size: 120px;
+  }
+}
+
 [data-theme="light"] .bg-pattern {
   opacity: 0.02;
 }
