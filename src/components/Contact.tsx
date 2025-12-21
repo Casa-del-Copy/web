@@ -40,7 +40,7 @@ export default function Contact() {
             </a>
 
             <a
-              className={styles.contactIconLink}
+              className={`${styles.contactIconLink} ${styles.emailIcon}`}
               href="mailto:casadelcopy@gmail.com"
               target="_blank"
               rel="noopener noreferrer"

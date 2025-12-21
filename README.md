@@ -5,7 +5,6 @@
 - design review by Pero
 - papiri kako lete na vrhu hero slike
 - ispeglate male quotese
-- popraviti email ikonu u contact
 - dodati da se espaniol automatski vrti na mobileu
 
 ## Notes
