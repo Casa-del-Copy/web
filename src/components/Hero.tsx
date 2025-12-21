@@ -15,7 +15,7 @@ export default function Hero() {
         className={styles.heroImage}
         aria-label="Hero image"
       >
-        <img src="/fotke/zajednicka_papiri2-cropped-extension.png" alt="Hero image extension" className={styles.heroImageExtension} />
+        <img src="/hero-extension.png" alt="Hero image extension" className={styles.heroImageExtension} />
       </div>
     </Section>
   );

@@ -9,7 +9,7 @@
 
 .heroImage {
   aspect-ratio: 2000 / 1580;
-  background-image: url("/fotke/zajednicka_papiri2-cropped.jpeg");
+  background-image: url("/hero.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,6 +22,6 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 12%;
+  top: 9%;
   transform: translateY(-100%);
 }
