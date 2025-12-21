@@ -28,14 +28,14 @@
 
 @media (--mobile-tablet) {
   .contactBox {
-    padding: 48px;
+    padding: 72px 48px;
     border-radius: 0;
   }
 }
 
 @media (--mobile) {
   .contactBox {
-    padding: 32px;
+    padding: 72px 32px;
   }
 }
 

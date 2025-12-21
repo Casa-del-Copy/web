@@ -24,7 +24,7 @@ export default function Header({ isDark, toggleTheme }: {
     <header
       className={`${styles.header} ${isScrolled ? styles.isScrolled : ""}`}
     >
-      <div className={styles.themeToggleContainer}>
+      {/* <div className={styles.themeToggleContainer}>
         <button
           className={styles.themeToggleButton}
           onClick={toggleTheme}
@@ -47,7 +47,7 @@ export default function Header({ isDark, toggleTheme }: {
             </svg>
           )}
         </button>
-      </div>
+      </div> */}
 
       <div className={styles.logoContainer}>
         <svg
@@ -73,7 +73,7 @@ export default function Header({ isDark, toggleTheme }: {
 
         <a
           className={styles.socialButton}
-          href="mailto:casadelcopy@gmail.com"
+          href="https://wa.me/+385989569960?text=Treba mi content, život mi je sapunica!"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Email"

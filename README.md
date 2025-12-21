@@ -3,7 +3,6 @@
 ## TODOs
 
 - design review by Pero
-- papiri kako lete na vrhu hero slike
 - ispeglate male quotese
 - dodati da se espaniol automatski vrti na mobileu
 

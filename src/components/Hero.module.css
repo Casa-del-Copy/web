@@ -6,7 +6,13 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  margin: 72px 0 144px;
+  margin: 72px 0 288px;
+}
+
+@media (--mobile) {
+  .headline {
+    margin: 72px 0 144px;
+  }
 }
 
 .heroImage {

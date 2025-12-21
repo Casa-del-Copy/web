@@ -1,7 +1,6 @@
 @import "../core/custom-media.css";
 
 .header {
-  width: 100%;
   display: flex;
   align-items: flex-start;
   padding: 48px;
@@ -27,11 +26,13 @@
 
 .themeToggleContainer {
   width: 82px;
+  visibility: hidden;
 }
 
 @media (--mobile) {
   .themeToggleContainer {
     width: 66px;
+    display: none;
   }
 }
 
@@ -58,19 +59,25 @@
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   pointer-events: none;
   z-index: 1;
 }
 
+@media (--mobile) {
+  .logoContainer {
+    justify-content: start;
+  }
+}
+
 .logo {
-  width: 310px;
-  height: 192px;
+  width: 206px;
+  height: 128px;
 }
 
 @media (--mobile-tablet) {
   .logo {
-    width: 206;
+    width: 206px;
     height: 128px;
   }
 }

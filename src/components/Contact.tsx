@@ -29,7 +29,7 @@ export default function Contact() {
 
             <a
               className={styles.contactIconLink}
-              href="https://wa.me/00385989569960?text=Treba mi content, život mi je sapunica!"
+              href="https://wa.me/+385989569960?text=Treba mi content, život mi je sapunica!"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Whats App"
