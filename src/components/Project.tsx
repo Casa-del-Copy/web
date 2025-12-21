@@ -75,7 +75,7 @@ export default function Project({ projectLinks, videoUrl, heading, paragraph, po
                 ref={videoRef}
                 src={videoUrl}
                 playsInline
-                muted
+                // muted
                 loop
                 className={styles.phoneVideo}
               />

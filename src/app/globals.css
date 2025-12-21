@@ -194,7 +194,7 @@ a {
 
 @media (max-width: 639px) {
   .bg-pattern {
-    background-size: 120px;
+    background-size: 180px;
   }
 }
 
@@ -212,11 +212,6 @@ a {
 [data-theme="light"] .divider {
   background-color: var(--color-text-3);
   opacity: 0.4;
-}
-
-.slick-arrow {
-  height: 40px;
-  width: 40px;
 }
 
 * {
