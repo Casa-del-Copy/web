@@ -12,6 +12,7 @@ interface GalleryImage {
 }
 
 interface ProjectProps {
+  projectLinks: {title: string, url: string}[];
   videoUrl: string;
   heading: string;
   paragraph: string;
@@ -19,7 +20,7 @@ interface ProjectProps {
   galleryImages?: GalleryImage[];
 }
 
-export default function Project({ videoUrl, heading, paragraph, position = "right", galleryImages }: ProjectProps) {
+export default function Project({ projectLinks, videoUrl, heading, paragraph, position = "right", galleryImages }: ProjectProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const isMobile = useMediaQuery('(max-width: 639px)');
@@ -68,9 +69,6 @@ export default function Project({ videoUrl, heading, paragraph, position = "righ
         <div className={styles.videoWrapper}>
           {/* Phone Frame */}
           <div className={styles.phoneFrame}>
-            {/* Notch */}
-            <div className={styles.phoneNotch} />
-
             {/* Screen */}
             <div className={styles.phoneScreen}>
               <video
@@ -89,7 +87,17 @@ export default function Project({ videoUrl, heading, paragraph, position = "righ
           {!isMobile && (
             <h3 className={styles.projectHeading}>{heading}</h3>
           )}
+
           <p className={styles.projectParagraph}>{paragraph}</p>
+
+          {projectLinks.map((link) => (
+            <div key={link.title}>
+              <br />
+              <a href={link.url} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
+                {link.title}
+              </a>
+            </div>
+          ))}
         </div>
       </div>
 

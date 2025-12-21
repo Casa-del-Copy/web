@@ -38,21 +38,23 @@ export default function Home() {
   return (
     <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 w-full">
       <main>
+        <div className="bg-pattern" />
+
         <Header isDark={isDark} toggleTheme={toggleTheme} />
 
         <Hero />
 
         <Projects />
 
-        <Quote text="Godinama smo bile novinarke, ali slijedom životnih okolnosti postale smo content kreatori, što nije ništa spektakularno." />
+        <Quote text="Views? <br /> Više od epizode u kojoj je Esmeralda progledala." />
 
         <Services />
 
-        <Quote text="Godinama smo bile novinarke, ali slijedom životnih okolnosti postale smo content kreatori, što nije ništa spektakularno." />
+        <Quote text="Iza svake objave… <br /> Krije se neočekivani obrat! <br /> (gasps in Spanish)" />
 
         <About />
 
-        <Quote text="Godinama smo bile novinarke, ali slijedom životnih okolnosti postale smo content kreatori, što nije ništa spektakularno." />
+        <Quote text="U sljedećoj epizodi… <br /> Neočekivani briefovi. Nemogući rokovi. Predugačke rečenice. Previše ideja. Hoće li pitch preživjeti komentare klijenta? Hoće li brend pronaći svoj TOV?" />
 
         <Contact />
 

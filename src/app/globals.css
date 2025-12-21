@@ -5,8 +5,8 @@
   --color-dark: #171614;
   --color-magenta-dark: #250F1B;
   --color-magenta: #943D6D;
-  --color-magenta-20opacity: rgba(148, 61, 109, 0.2);
-  --color-magenta-40opacity: rgba(148, 61, 109, 0.4);
+  --color-magenta-20opacity: rgba(148, 61, 109, 0.6);
+  --color-magenta-40opacity: rgba(148, 61, 109, 0.6);
   --color-pink: #E06C88;
   --color-green: #C4D6B0;
   --color-green-20opacity: rgba(196, 214, 176, 0.2);
@@ -57,7 +57,7 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 17px;
 }
 
 body {
@@ -83,7 +83,7 @@ h1 {
 
 @media (--mobile) {
   h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     margin-bottom: 2.8rem;
   }
 }
@@ -104,7 +104,7 @@ h2 {
 
 @media (--mobile) {
   h2 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     margin-bottom: 2.2rem;
   }
 }
@@ -125,7 +125,7 @@ h3 {
 
 @media (--mobile) {
   h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 1.8rem;
   }
 }
@@ -157,10 +157,47 @@ h5 {
   margin-bottom: 1rem;
 }
 
+a {
+  color: var(--color-text-2);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .hovered-text {
   color: var(--color-text-2);
 }
 
 .font-outline {
   font-family: var(--font-ttramillasoutline), Arial, Helvetica, sans-serif;
+}
+
+.bg-pattern {
+  background-image: url("/bg-circles-pattern-1.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 240px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.03;
+}
+
+[data-theme="light"] .bg-pattern {
+  opacity: 0.02;
+}
+
+.divider {
+  height: 2px;
+  background-color: var(--color-bg-box-2);
+  flex: 1;
+}
+
+[data-theme="light"] .divider {
+  background-color: var(--color-text-3);
+  opacity: 0.4;
 }

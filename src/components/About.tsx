@@ -20,16 +20,15 @@ export default function About() {
             <p className={styles.text}>
               Casa del Copy je kreativna agencija čiju sudbinu u šaci drže dvije mujersuele* koje se, iako stvaraju content s kojim vajba Gen Z, dobro sjećaju kako je Marisol zaradila ožiljak**.
               Godinama smo bile novinarke, ali slijedom životnih okolnosti postale smo content kreatorice i copywriterice***.
-              Uživamo u kreiranju video i foto contenta, ali naša amor para siempre**** je riječ.
+              Uživamo u kreiranju video i foto contenta, ali naša amor para siempre je riječ.
               Pisanje. Copy. Sukladno tome, u slobodno vrijeme savršeno precizno skeniramo, detektiramo i svisoka komentiramo AI tekstove.
-              Za kraj, moto nam možda je {"\""}Content, ne sapunica{"\""}, ali tko smo mi da se pretvaramo - low key životni cilj nam je napisati (dobru) sapunicu.
+              Za kraj, moto nam možda je {"\""}Content, ne sapunica{"\""}, ali tko smo mi da se pretvaramo - low key životni cilj nam je napisati scenarij za sapunicu.
             </p>
 
             <ul className={styles.subList}>
               <li><sub>*Ženetina, klasična telenovela uvreda. Nismo, ali mujersuela je najbolja riječ.</sub></li>
               <li><sub>**Pala je NA razbijeno ogledalo dok je trčala šumicom. S ogledalom.</sub></li>
               <li><sub>***Male izmjene u srodnim područjima karijere nisu ništa neobično, prisjetimo se da je Juan Miguel, iako psihijatar, za nekoliko mjeseci postao oftalmolog-kirurg kako bi operirao Marichuy od sljepoće.</sub></li>
-              <li><sub>****Možete li vjerovati da ne postoji telenovela naziva “Amor para siempre”?</sub></li>
             </ul>
           </div>
         </div>
@@ -90,7 +89,7 @@ export default function About() {
               U Jutarnjem listu osam je godina pisala i uređivala Dom&Dizajn, ulazila ljudima u domove i isporučivala priče s dozom humora koji joj postaje zaštitni znak.
               U agenciji Pišemo tri godine osmišljavala je kampanje, popravljala briefove i rješavala nemoguće {"\""}usput{"\""}.
               <br /><br />
-              Kod kuće balansira školske i vrtićke zadatke svoje djece i raspored letova muža pilota. I sve uvijek sleti kako treba.
+              Kod kuće balansira školske i vrtićke zadatke svoje djece i potajno slaže puzzle od 1000+ komada. Isprva se čini kaotično, ali na kraju, guess what - sve sjedne na svoje mjesto.
             </p>
           </div>
         </div>

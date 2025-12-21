@@ -10,7 +10,7 @@
 
 .quoteContent {
   position: relative;
-  max-width: 650px;
+  max-width: 440px;
   width: 100%;
   padding-left: 24px;
   text-align: center;
@@ -28,8 +28,9 @@
   transform: rotate(2.5deg);
   color: var(--color-text-3);
   font-style: italic;
-  max-width: 440px;
+  max-width: 380px;
   font-weight: 500;
+  font-size: 1.1rem;
 }
 
 [data-theme="dark"] .quoteText {
@@ -43,6 +44,7 @@
   transform: rotate(-15deg);
   opacity: 0.6;
   pointer-events: none;
+  display: none;
 }
 
 .quoteDropIcon path {

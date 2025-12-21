@@ -2,7 +2,7 @@
 
 .footer {
   width: 100%;
-  border-top: 2px solid var(--color-bg-box-2);
+  /* border-top: 2px solid var(--color-bg-box-2); */
   padding: 72px 0;
   margin-top: 72px;
 }
@@ -52,5 +52,4 @@
 .footerBlooperText {
   text-align: center;
   color: var(--color-text-3);
-  font-family: var(--font-ttramillasoutline), Arial, Helvetica, sans-serif;
 }

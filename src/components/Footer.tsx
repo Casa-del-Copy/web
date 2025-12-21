@@ -7,6 +7,9 @@ export default function Footer() {
         <div className={styles.footerColumn}>
           <h5>Casa del Copy d.o.o.</h5>
           <ul>
+            <li> casadelcopy@gmail.com </li>
+          </ul>
+          <ul>
             <li>Štefanovec 143</li>
             <li>10000 Zagreb</li>
           </ul>
@@ -33,7 +36,7 @@ export default function Footer() {
       </div>
 
       <h2 className={styles.footerBlooperText}>
-        Largate de mi casa!
+        ¡Largate de mi casa!
       </h2>
     </footer>
   );

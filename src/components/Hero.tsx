@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <Section>
       <div className={styles.headline}>
-        <h1 className="font-outline">
+        <h1>
           <span style={{ color: "var(--color-text-1)" }}>Content, </span>
           <span style={{ color: "var(--color-text-2)" }}> ne sapunica.</span>
         </h1>

@@ -9,6 +9,8 @@ export default function Quote({ text }: QuoteProps) {
   return (
     <Section>
       <div className={styles.quoteContainer}>
+        <div className="divider" />
+
         <div className={styles.quoteContent}>
           <div className={styles.quoteText}>
             <svg
@@ -26,9 +28,11 @@ export default function Quote({ text }: QuoteProps) {
               />
             </svg>
 
-            {text}
+            <div dangerouslySetInnerHTML={{ __html: text }} />
           </div>
         </div>
+
+        <div className="divider" />
       </div>
     </Section>
   );
