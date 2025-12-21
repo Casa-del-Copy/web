@@ -17,12 +17,17 @@ interface GalleryProps {
   images: GalleryImage[];
 }
 
+interface SliderRef {
+  slickNext: () => void;
+  slickPrev: () => void;
+}
+
 export default function Gallery({ images }: GalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const [isPaused, setIsPaused] = useState(false);
   const isMobile = useIsMobile();
-  let sliderRef = useRef<any>(null);
+  let sliderRef: SliderRef | null = null;
 
   const openModal = (index: number) => {
     setSelectedIndex(index);
@@ -111,14 +116,14 @@ export default function Gallery({ images }: GalleryProps) {
   // }, [isPaused, images.length, goToNextSlide]);
 
   const goToNextSlide = () => {
-    (sliderRef as any).slickNext();
+    (sliderRef as unknown as SliderRef).slickNext();
   };
 
   const goToPrevSlide = () => {
-    (sliderRef as any).slickPrev();
+    (sliderRef as unknown as SliderRef).slickPrev();
   };
 
-  const registerSliderRef = (slider: any) => {
+  const registerSliderRef = (slider: SliderRef) => {
     sliderRef = slider;
   };
 
