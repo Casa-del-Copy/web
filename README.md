@@ -2,13 +2,13 @@
 
 ## TODOs
 
-- nacrtati papire kako lete na vrhu
-- zamijeniti oba project videa
-- mobile je dizajnerski nedorečen
+- design review by Pero
+- papiri kako lete na vrhu hero slike
 - popraviti infinte scroll na galeriji
 - ispeglate male quotese
-- design review kompletan
 - popraviti email ikonu u contact
+- video ratio problem na mobileu
+- dodati da se espaniol automatski vrti na mobileu
 
 ## Notes
 

@@ -27,8 +27,6 @@ export default function Footer() {
           </ul>
 
           <ul>
-            <li>Temeljni kapital: 2.500€, uplaćen u cijelosti</li>
-            <li>Registarski sud: Trgovački sud u Zagrebu</li>
             <li>IBAN: HR4923400091111314379</li>
             <li>(Privredna banka Zagreb)</li>
           </ul>

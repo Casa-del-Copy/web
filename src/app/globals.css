@@ -157,6 +157,10 @@ h5 {
   margin-bottom: 1rem;
 }
 
+sub {
+  opacity: 0.8;
+}
+
 a {
   color: var(--color-text-2);
 

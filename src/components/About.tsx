@@ -25,6 +25,7 @@ export default function About() {
               Za kraj, moto nam možda je {"\""}Content, ne sapunica{"\""}, ali tko smo mi da se pretvaramo - low key životni cilj nam je napisati scenarij za sapunicu.
             </p>
 
+            <br />
             <ul className={styles.subList}>
               <li><sub>*Ženetina, klasična telenovela uvreda. Nismo, ali mujersuela je najbolja riječ.</sub></li>
               <li><sub>**Pala je NA razbijeno ogledalo dok je trčala šumicom. S ogledalom.</sub></li>
