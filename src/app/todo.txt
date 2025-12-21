@@ -1,8 +1,0 @@
-- nacrtati papire
-- zamijeniti oba project videa
-- mobile je dizajnerski nedorečen
-- popraviti infinte scroll na galeriji
-- ispeglate male quotese
-
-Galerija dimenzije thumb: 588x782
-Galerija dimenzije full: 960x1760

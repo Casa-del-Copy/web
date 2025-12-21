@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "../core/custom-media.css";
 
+
 :root {
   --color-dark: #171614;
   --color-magenta-dark: #250F1B;
@@ -210,4 +211,13 @@ a {
 [data-theme="light"] .divider {
   background-color: var(--color-text-3);
   opacity: 0.4;
+}
+
+.slick-arrow {
+  height: 40px;
+  width: 40px;
+}
+
+* {
+  outline: none;
 }
