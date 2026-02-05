@@ -11,12 +11,24 @@ export default function LiveText({ tag, children, hoverText, textOnIntersection,
 }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isIntersected, setIsIntersected] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [visibleChars, setVisibleChars] = useState(0);
   const isInitialRender = useRef(true);
   const elementRef = useRef<HTMLElement>(null);
 
+  // Detect mobile on mount
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const altText = textOnIntersection ?? hoverText ?? children;
-  const shouldShowAltText = textOnIntersection ? isIntersected : isHovered;
+  // On mobile with hoverText, use intersection; otherwise use existing logic
+  const shouldShowAltText = (isMobile && hoverText) ? isIntersected : (textOnIntersection ? isIntersected : isHovered);
   const displayText = shouldShowAltText ? altText : children;
 
   const textString = useMemo(() => {
@@ -52,21 +64,24 @@ export default function LiveText({ tag, children, hoverText, textOnIntersection,
     };
   }, [textString, shouldShowAltText, characters.length]);
 
+  // Intersection observer for mobile hoverText or explicit textOnIntersection
   useEffect(() => {
-    if (!textOnIntersection || !elementRef.current) return;
+    const shouldObserve = textOnIntersection || (isMobile && hoverText);
+    if (!shouldObserve || !elementRef.current) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-            console.log('isIntersecting');
-            setIsIntersected(true);
-          }
+          // With rootMargin reducing the viewport to a thin center area,
+          // we only check isIntersecting (not ratio)
+          setIsIntersected(entry.isIntersecting);
         });
       },
       {
-        rootMargin: '0px 0px 50% 0px',
-        threshold: [0.5],
+        // Negative margins shrink the root from top and bottom by 40% each,
+        // creating a 20% tall observation zone in the center of the viewport
+        rootMargin: '-40% 0px -40% 0px',
+        threshold: 0,
       }
     );
 
@@ -75,19 +90,20 @@ export default function LiveText({ tag, children, hoverText, textOnIntersection,
     return () => {
       observer.disconnect();
     };
-  }, [textOnIntersection]);
+  }, [textOnIntersection, isMobile, hoverText]);
 
   return createElement(
     tag,
     {
+      ref: elementRef,
       onMouseEnter: () => setIsHovered(true),
       onMouseLeave: () => setIsHovered(false),
       style,
-      className: isHovered ? "hovered-text" : "",
+      className: shouldShowAltText ? "hovered-text" : "",
     },
     characters.slice(0, visibleChars).map((char, index) => (
       <span
-        key={`${isHovered}-${index}-${char}`}
+        key={`${shouldShowAltText}-${index}-${char}`}
         style={{
           display: "inline-block",
         }}
