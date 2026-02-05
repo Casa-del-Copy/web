@@ -56,7 +56,7 @@ export default function About() {
 
             <p className={styles.text}>
               Magistrirala je komunikologiju, ali pisanje voli još od osnovnoškolskih zadaćnica koje su uvijek bile malo duže od traženog.
-              U fotoagenciji Cropix trenirala je oko za detalje, a u Domu i Dizajnu Jutarnjeg lista godinama slagala priče o prostoru, stilu i ljudima.
+              U fotoagenciji Cropix trenirala je oko za detalje, a u Domu & Dizajnu Jutarnjeg lista godinama slagala priče o prostoru, stilu i ljudima.
               Nakon kreativnih kampanja u agenciji Pišemo, danas je polovica tandema Casa del Copy i vodi glavnu riječ za estetiku, ton i atmosferu.
               <br /><br />
               Kad ne piše, slaže moodboarde, traži savršene lokacije i žonglira s dvije djevojčice, tri lonca i mužem IT-evcem zaduženim za otpetljavanje svega što se u Casi otpetljati mora - od kablova do poslovnih izazova.

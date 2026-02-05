@@ -27,18 +27,6 @@
   --color-text-3: var(--color-green);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    --color-bg-body: var(--color-magenta-dark);
-    --color-bg-box-1: var(--color-magenta-20opacity);
-    --color-bg-box-2: var(--color-magenta-40opacity);
-    --color-bg-3: var(--color-magenta-40opacity);
-    --color-text-1: var(--color-beige);
-    --color-text-2: var(--color-pink);
-    --color-text-3: var(--color-green);
-  }
-}
-
 [data-theme="dark"] {
   --color-bg-body: var(--color-magenta-dark);
   --color-bg-box-1: var(--color-magenta-20opacity);
@@ -46,15 +34,6 @@
   --color-text-1: var(--color-beige);
   --color-text-2: var(--color-pink);
   --color-text-3: var(--color-green);
-}
-
-[data-theme="light"] {
-  --color-bg-body: var(--color-beige);
-  --color-bg-box-1: var(--color-white);
-  --color-bg-box-2: var(--color-green-20opacity);
-  --color-text-1: var(--color-dark);
-  --color-text-2: var(--color-magenta);
-  --color-text-3: var(--color-pink);
 }
 
 html {
@@ -198,20 +177,11 @@ a {
   }
 }
 
-[data-theme="light"] .bg-pattern {
-  opacity: 0.02;
-}
-
 .divider {
   height: 2px;
   background-color: var(--color-bg-box-2);
   flex: 1;
   opacity: 0.7;
-}
-
-[data-theme="light"] .divider {
-  background-color: var(--color-text-3);
-  opacity: 0.4;
 }
 
 * {
