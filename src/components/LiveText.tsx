@@ -72,15 +72,16 @@ export default function LiveText({ tag, children, hoverText, textOnIntersection,
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          // With rootMargin reducing the viewport to a thin center area,
-          // we only check isIntersecting (not ratio)
+          // When element is in the top half of viewport, show alt text (Spanish)
+          // When element is in the bottom half, show original (Croatian)
           setIsIntersected(entry.isIntersecting);
         });
       },
       {
-        // Negative margins shrink the root from top and bottom by 40% each,
-        // creating a 20% tall observation zone in the center of the viewport
-        rootMargin: '-40% 0px -40% 0px',
+        // Shrink viewport from bottom by 50%, so observation zone is top half
+        // isIntersecting=true means element is in top half → show Spanish
+        // isIntersecting=false means element is in bottom half → show Croatian
+        rootMargin: '0px 0px -50% 0px',
         threshold: 0,
       }
     );

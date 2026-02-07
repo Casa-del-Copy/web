@@ -28,7 +28,13 @@ export default function Footer() {
 
           <ul>
             <li>IBAN: HR4923400091111314379</li>
-            <li>(Privredna banka Zagreb)</li>
+          </ul>
+          <ul>
+            <li>
+              <a href="/politika-privatnosti.pdf" target="_blank" rel="noopener noreferrer">
+                Politika privatnosti
+              </a>
+            </li>
           </ul>
         </div>
       </div>
