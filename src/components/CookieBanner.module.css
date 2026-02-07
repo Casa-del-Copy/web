@@ -1,0 +1,64 @@
+@import "../core/custom-media.css";
+
+.banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 32px;
+  background: var(--color-dark);
+  border-top: 1px solid var(--color-magenta-20opacity);
+}
+
+@media (--mobile) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 24px;
+    gap: 16px;
+  }
+}
+
+.text {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--color-text-1);
+}
+
+.text a {
+  color: var(--color-text-3);
+  text-decoration: underline;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.declineButton,
+.acceptButton {
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.declineButton {
+  background: transparent;
+  color: var(--color-text-1);
+  border: 1px solid var(--color-text-1);
+}
+
+.acceptButton {
+  background: var(--color-text-3);
+  color: var(--color-dark);
+  font-weight: 500;
+}

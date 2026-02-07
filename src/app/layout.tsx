@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import CookieBanner from "@/components/CookieBanner";
 
 const ttRamillas = localFont({
   src: [
@@ -109,19 +110,10 @@ export default function RootLayout({
     <html lang="hr" data-theme="dark">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3J0T85VFFS"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-3J0T85VFFS');
-          `
-        }} />
       </head>
       <body className={`${ttRamillas.variable} ${ttRamillasOutline.variable} antialiased`}>
         {children}
+        <CookieBanner />
       </body>
     </html>
   );
