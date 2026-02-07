@@ -9,26 +9,13 @@ export default function LiveText({ tag, children, hoverText, textOnIntersection,
   textOnIntersection?: string;
   style?: CSSProperties | undefined;
 }) {
-  const [isHovered, setIsHovered] = useState(false);
   const [isIntersected, setIsIntersected] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const [visibleChars, setVisibleChars] = useState(0);
   const isInitialRender = useRef(true);
   const elementRef = useRef<HTMLElement>(null);
 
-  // Detect mobile on mount
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
   const altText = textOnIntersection ?? hoverText ?? children;
-  // On mobile with hoverText, use intersection; otherwise use existing logic
-  const shouldShowAltText = (isMobile && hoverText) ? isIntersected : (textOnIntersection ? isIntersected : isHovered);
+  const shouldShowAltText = (hoverText || textOnIntersection) ? isIntersected : false;
   const displayText = shouldShowAltText ? altText : children;
 
   const textString = useMemo(() => {
@@ -64,9 +51,9 @@ export default function LiveText({ tag, children, hoverText, textOnIntersection,
     };
   }, [textString, shouldShowAltText, characters.length]);
 
-  // Intersection observer for mobile hoverText or explicit textOnIntersection
+  // Intersection observer - triggers when element crosses 50% viewport line
   useEffect(() => {
-    const shouldObserve = textOnIntersection || (isMobile && hoverText);
+    const shouldObserve = textOnIntersection || hoverText;
     if (!shouldObserve || !elementRef.current) return;
 
     const observer = new IntersectionObserver(
@@ -91,14 +78,12 @@ export default function LiveText({ tag, children, hoverText, textOnIntersection,
     return () => {
       observer.disconnect();
     };
-  }, [textOnIntersection, isMobile, hoverText]);
+  }, [textOnIntersection, hoverText]);
 
   return createElement(
     tag,
     {
       ref: elementRef,
-      onMouseEnter: () => setIsHovered(true),
-      onMouseLeave: () => setIsHovered(false),
       style,
       className: shouldShowAltText ? "hovered-text" : "",
     },
