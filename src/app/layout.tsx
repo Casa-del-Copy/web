@@ -97,12 +97,12 @@ const ttRamillasOutline = localFont({
 
 export const metadata: Metadata = {
   title: "Casa del Copy",
-  description: "Content, ne sapunica.",
+  description: "Content, ne sapunica. Kreativna agencija.",
   viewport: null,
   metadataBase: new URL("https://casadelcopy.hr"),
   openGraph: {
     title: "Casa del Copy",
-    description: "Content, ne sapunica.",
+    description: "Content, ne sapunica. Kreativna agencija.",
     url: "https://casadelcopy.hr",
     siteName: "Casa del Copy",
     images: [
@@ -119,7 +119,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Casa del Copy",
-    description: "Content, ne sapunica.",
+    description: "Content, ne sapunica. Kreativna agencija.",
     images: ["/hero-og.jpeg"],
   },
 };
@@ -135,7 +135,7 @@ export default function RootLayout({
     name: "Casa del Copy",
     url: "https://casadelcopy.hr",
     email: "casadelcopy@gmail.com",
-    description: "Content, ne sapunica.",
+    description: "Content, ne sapunica. Kreativna agencija.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Štefanovec 143",

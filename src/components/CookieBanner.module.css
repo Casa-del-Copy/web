@@ -12,7 +12,7 @@
   gap: 24px;
   padding: 16px 32px;
   background: var(--color-dark);
-  border-top: 1px solid var(--color-magenta-20opacity);
+  border-top: 1px solid var(--color-magenta-40opacity);
 }
 
 @media (--mobile) {

@@ -1,15 +1,9 @@
 "use client"
 
 import { useRef, useEffect } from "react";
-import Gallery from "./Gallery";
+import Gallery, { GalleryImage } from "./Gallery";
 import styles from "./Project.module.css";
-import {useMediaQuery} from "@/hooks/use-media-query";
-
-interface GalleryImage {
-  src: string;
-  thumb?: string;
-  caption: string;
-}
+import { useIsMobile } from "@/hooks/use-media-query";
 
 interface ProjectProps {
   projectLinks: {title: string, url: string}[];
@@ -23,7 +17,7 @@ interface ProjectProps {
 export default function Project({ projectLinks, videoUrl, heading, paragraph, position = "right", galleryImages }: ProjectProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const isMobile = useMediaQuery('(max-width: 639px)');
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const video = videoRef.current;

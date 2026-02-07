@@ -1,7 +1,6 @@
 @import "../core/custom-media.css";
 
 .sliderContainer {
-  /* width: 100%; */
   margin-top: 48px;
   position: relative;
   max-height: 400px;
@@ -138,29 +137,6 @@
 }
 
 @media (--mobile-tablet) {
-  .galleryCarouselTrack {
-    gap: 8px;
-    transform: translateX(calc(var(--current-index, 0) * -1 * ((100% - 16px) / 3 + 8px)));
-  }
-
-  .galleryThumbnail {
-    flex: 0 0 calc((100% - 16px) / 3);
-  }
-
-  .galleryCarouselNav {
-    width: 40px;
-    height: 40px;
-    font-size: 28px;
-  }
-
-  .galleryCarouselPrev {
-    left: 4px;
-  }
-
-  .galleryCarouselNext {
-    right: 4px;
-  }
-
   .galleryModalPrev {
     left: 10px;
   }
@@ -171,29 +147,6 @@
 }
 
 @media (--mobile) {
-  .galleryCarouselTrack {
-    gap: 6px;
-    transform: translateX(calc(var(--current-index, 0) * -1 * ((100% - 6px) / 2 + 6px)));
-  }
-
-  .galleryThumbnail {
-    flex: 0 0 calc((100% - 6px) / 2);
-  }
-
-  .galleryCarouselNav {
-    width: 36px;
-    height: 36px;
-    font-size: 24px;
-  }
-
-  .galleryCarouselPrev {
-    left: 2px;
-  }
-
-  .galleryCarouselNext {
-    right: 2px;
-  }
-
   .galleryModalOverlay {
     padding: 10px;
   }

@@ -1,13 +1,13 @@
 "use client"
 
 import Slider from "react-slick";
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Gallery.module.css";
 import { useIsMobile } from "../hooks/use-media-query";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-interface GalleryImage {
+export interface GalleryImage {
   src: string;
   thumb?: string;
   caption: string;
@@ -24,8 +24,6 @@ interface SliderRef {
 
 export default function Gallery({ images }: GalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const [isPaused, setIsPaused] = useState(false);
   const isMobile = useIsMobile();
   let sliderRef: SliderRef | null = null;
 
@@ -86,34 +84,6 @@ export default function Gallery({ images }: GalleryProps) {
       };
     }
   }, [selectedIndex, images.length]);
-
-  // Auto-slide effect
-  //   const goToNextSlide = useCallback(() => {
-  //   if (selectedIndex !== null) {
-  //     setSelectedIndex(selectedIndex < images.length - 1 ? selectedIndex + 1 : 0);
-  //   }
-  // }, [selectedIndex, images.length]);
-
-  // useEffect(() => {
-  //   if (isPaused || images.length === 0) {
-  //     if (intervalRef.current) {
-  //       clearInterval(intervalRef.current);
-  //       intervalRef.current = null;
-  //     }
-  //     return;
-  //   }
-
-  //   intervalRef.current = setInterval(() => {
-  //     goToNextSlide();
-  //   }, 3000);
-
-  //   return () => {
-  //     if (intervalRef.current) {
-  //       clearInterval(intervalRef.current);
-  //       intervalRef.current = null;
-  //     }
-  //   };
-  // }, [isPaused, images.length, goToNextSlide]);
 
   const goToNextSlide = () => {
     (sliderRef as unknown as SliderRef).slickNext();

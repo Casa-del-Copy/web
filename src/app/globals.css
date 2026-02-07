@@ -6,7 +6,6 @@
   --color-dark: #171614;
   --color-magenta-dark: #250F1B;
   --color-magenta: #943D6D;
-  --color-magenta-20opacity: rgba(148, 61, 109, 0.6);
   --color-magenta-40opacity: rgba(148, 61, 109, 0.6);
   --color-pink: #E06C88;
   --color-green: #C4D6B0;
@@ -19,7 +18,6 @@
 
 @theme inline {
   --color-bg-body: var(--color-magenta-dark);
-  --color-bg-body: var(--color-magenta-dark);
   --color-bg-box-1: var(--color-magenta);
   --color-bg-box-2: var(--color-magenta-40opacity);
   --color-text-1: var(--color-white);
@@ -29,7 +27,7 @@
 
 [data-theme="dark"] {
   --color-bg-body: var(--color-magenta-dark);
-  --color-bg-box-1: var(--color-magenta-20opacity);
+  --color-bg-box-1: var(--color-magenta-40opacity);
   --color-bg-box-2: var(--color-magenta-40opacity);
   --color-text-1: var(--color-beige);
   --color-text-2: var(--color-pink);
