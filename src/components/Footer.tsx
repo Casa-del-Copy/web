@@ -1,6 +1,11 @@
+"use client";
+
+import { useState } from "react";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
+  const [showImage, setShowImage] = useState(false);
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footerGrid}>
@@ -39,9 +44,20 @@ export default function Footer() {
         </div>
       </div>
 
-      <h2 className={styles.footerBlooperText}>
+      <h2
+        className={styles.footerBlooperText}
+        onClick={() => setShowImage(!showImage)}
+      >
         ¡Largate de mi casa!
       </h2>
+
+      {showImage && (
+        <img
+          src="/maramica2.jpeg"
+          alt="Content koji izaziva emocije - casadelcopy.hr"
+          className={styles.footerImage}
+        />
+      )}
     </footer>
   );
 }

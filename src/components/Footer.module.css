@@ -52,4 +52,20 @@
 .footerBlooperText {
   text-align: center;
   color: var(--color-text-3);
+  cursor: pointer;
+}
+
+.footerImage {
+  display: block;
+  max-width: 480px;
+  width: 100%;
+  margin: 48px auto 0 auto;
+  border-radius: 24px;
+}
+
+@media (--mobile) {
+  .footerImage {
+    max-width: 320px;
+    margin-top: 32px;
+  }
 }
