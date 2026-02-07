@@ -40,4 +40,35 @@
   right: 0;
   top: 9%;
   transform: translateY(-100%);
+  animation: infinityFloat 12s linear infinite;
+}
+
+@keyframes infinityFloat {
+  0% {
+    transform: translateY(-100%) translate(0px, 0px) rotate(0deg);
+  }
+  12.5% {
+    transform: translateY(-100%) translate(5px, -3px) rotate(0.3deg);
+  }
+  25% {
+    transform: translateY(-100%) translate(8px, 0px) rotate(0deg);
+  }
+  37.5% {
+    transform: translateY(-100%) translate(5px, 3px) rotate(-0.3deg);
+  }
+  50% {
+    transform: translateY(-100%) translate(0px, 0px) rotate(0deg);
+  }
+  62.5% {
+    transform: translateY(-100%) translate(-5px, -3px) rotate(-0.3deg);
+  }
+  75% {
+    transform: translateY(-100%) translate(-8px, 0px) rotate(0deg);
+  }
+  87.5% {
+    transform: translateY(-100%) translate(-5px, 3px) rotate(0.3deg);
+  }
+  100% {
+    transform: translateY(-100%) translate(0px, 0px) rotate(0deg);
+  }
 }

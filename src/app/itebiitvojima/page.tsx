@@ -15,7 +15,7 @@ export default function ITebiITvojima() {
       <main>
         <div className="bg-pattern" />
         <br />
-        <h2> I tebi i tvojima! </h2>
+        <h1> I tebi i tvojima! </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-8">
 
