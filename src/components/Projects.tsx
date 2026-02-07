@@ -157,6 +157,20 @@ export default function Projects() {
           galleryImages={madreBadessaGalleryImages}
         />
       </Section>
+
+      <div className="divider" />
+
+      <Section>
+        <Project
+          projectLinks={[
+            {title: "Poliklinika Kinetis Website", url: "https://poliklinika-kinetis.hr/"}
+          ]}
+          videoUrl="/projects/kinetis-video.mp4"
+          heading="Poliklinika Kinetis"
+          paragraph="Poliklinika Kinetis tražila je komunikaciju koja neće pojednostavljivati struku, ali će pojednostaviti razumijevanje. Taj balans bio je polazišna točka cijelog projekta. Suradnja nam je posebno draga jer je tekla promišljeno i nenametljivo, s dovoljno prostora za fokus i precizne odluke. Slogan, web i sadržaj oblikovale smo s jasnim ciljem: točne informacije, smiren ton i osjećaj povjerenja. Iste smjernice prate i fotografije - diskretne, promišljene i usmjerene na bitno - kako bi jasno komunicirale sigurnost, stručnost i osjećaj da ste u pravim rukama."
+          position="right"
+        />
+      </Section>
     </Section>
   );
 }
