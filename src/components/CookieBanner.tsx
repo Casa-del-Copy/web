@@ -35,38 +35,44 @@ export default function CookieBanner() {
       loadGA();
     } else if (consent === null) {
       setVisible(true);
+      document.body.style.overflow = "hidden";
     }
+    return () => { document.body.style.overflow = ""; };
   }, []);
 
   function accept() {
     localStorage.setItem("cookie-consent", "accepted");
+    document.body.style.overflow = "";
     loadGA();
     setVisible(false);
   }
 
   function decline() {
     localStorage.setItem("cookie-consent", "declined");
+    document.body.style.overflow = "";
     setVisible(false);
   }
 
   if (!visible) return null;
 
   return (
-    <div className={styles.banner}>
-      <p className={styles.text}>
-        Koristimo kolačiće za analitiku kako bi znali je li{" "}
-        <a href="https://www.youtube.com/watch?v=zSBY_8VfI5g" target="_blank" rel="noopener noreferrer">
-          Gilda
-        </a>{" "}
-        svratila na naš web.
-      </p>
-      <div className={styles.buttons}>
-        <button onClick={decline} className={styles.declineButton}>
-          Odbijam
-        </button>
-        <button onClick={accept} className={styles.acceptButton}>
-          Prihvaćam
-        </button>
+    <div className={styles.overlay}>
+      <div className={styles.banner}>
+        <p className={styles.text}>
+          Koristimo kolačiće za analitiku kako bi znali je li{" "}
+          <a href="https://www.youtube.com/watch?v=zSBY_8VfI5g" target="_blank" rel="noopener noreferrer">
+            Gilda
+          </a>{" "}
+          svratila na naš web.
+        </p>
+        <div className={styles.buttons}>
+          <button onClick={decline} className={styles.declineButton}>
+            Odbijam
+          </button>
+          <button onClick={accept} className={styles.acceptButton}>
+            Prihvaćam
+          </button>
+        </div>
       </div>
     </div>
   );

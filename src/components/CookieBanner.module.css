@@ -1,11 +1,19 @@
 @import "../core/custom-media.css";
 
-.banner {
+.overlay {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
   z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.banner {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
